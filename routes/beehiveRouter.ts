@@ -17,10 +17,6 @@ router.get('/beehive', checkAuth, cache(300), canGetBeehive, BeehiveController.g
 
 router.get('/beehive/:beehiveId', cache(300), checkAuth, canGetBeehive, BeehiveController.getOne)
 
-router.get('/beehive/date/all', cache(300), checkAuth, canGetBeehive, BeehiveController.getAllByDate)
-
-router.get('/beehive/date/one', cache(300), checkAuth, canGetBeehive, BeehiveController.getOneByDate)
-
 router.patch('/beehive/:beehiveId', checkAuth, canGetBeehive, beehiveCreateValidation, handleValidationErrors, BeehiveController.update)
 
 router.delete('/beehive/:beehiveId', checkAuth, canGetBeehive, BeehiveController.remove)

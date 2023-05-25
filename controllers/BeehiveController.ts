@@ -85,62 +85,6 @@ export const getOne = async (req: IReqBeehive, res: Response) => {
     }
 };
 
-export const getAllByDate = async (req: Request, res: Response) => {
-    try {
-        const {apiaryId, createdAt, updatedAt} = req.params;
-
-        const beehives = await BeehiveModel.find({apiary: apiaryId, createdAt: createdAt, updatedAt: updatedAt});
-
-        res.json(beehives);
-    } catch (err) {
-        console.log(err);
-        res.status(500).json({
-            message: req.t('BEEHIVE.ERROR_GET_ALL'),
-        });
-    }
-};
-
-export const getOneByDate = async (req: IReqBeehive, res: Response) => {
-    try {
-        const {apiaryId, beehiveId, createdAt, updatedAt} = req.params;
-
-
-        // if (req.userId)
-
-        BeehiveModel.findOne(
-            {
-                _id: beehiveId,
-                apiary: apiaryId,
-                createdAt: createdAt,
-                updatedAt: updatedAt
-            },
-            async (err: any, doc: IBeehive) => {
-                if (err) {
-                    console.log(err);
-                    return res.status(500).json({
-                        message: req.t('BEEHIVE.ERROR_GET_ONE'),
-                    });
-                }
-
-                if (!doc) {
-                    return res.status(404).json({
-                        message: req.t('BEEHIVE.NOT_FOUND'),
-                    });
-                }
-
-
-                res.json(doc);
-
-            },
-        );
-    } catch (err) {
-        console.log(err);
-        res.status(500).json({
-            message: req.t('BEEHIVE.ERROR_GET_ONE'),
-        });
-    }
-};
-
 export const remove = async (req: Request, res: Response) => {
     try {
         const {apiaryId, beehiveId} = req.params;

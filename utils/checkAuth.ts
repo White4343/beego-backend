@@ -15,11 +15,11 @@ export default (req: IReqGetMe, res: Response, next: NextFunction) => {
         } catch (error) {
             console.log(error);
             return res.status(403).json({
-                message: 'Немає доступу',
+                message: req.t('USER.ERROR_ACCESS'),
             });
         }
     } else
         return res.status(403).json({
-            message: 'Немає доступу',
+            message: req.t('USER.ERROR_ACCESS'),
         });
 };

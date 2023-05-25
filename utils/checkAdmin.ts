@@ -9,26 +9,21 @@ export const checkAdmin = async (req: IReqGetMe, res: Response, next: NextFuncti
             {
                 _id: req.userId,
             })
-
         if (!user) {
             return res.status(404).json({
                 message: req.t('USER.ERROR_GET_ONE'),
             });
         }
-
         if (user.role !== ROLE.ADMIN) {
             return res.status(500).json({
                 message: req.t('USER.ERROR_ACCESS'),
             });
         }
-
         next()
-
     } catch (err) {
         console.log(err);
         res.status(500).json({
             message: req.t('USER.ERROR_ACCESS'),
         });
     }
-
 }
