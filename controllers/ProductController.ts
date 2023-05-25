@@ -67,6 +67,7 @@ export const getOne = async (req: Request, res: Response) => {
                 res.json(doc);
             },
         );
+
     } catch (err) {
         console.log(err);
         res.status(500).json({
