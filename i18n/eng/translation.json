@@ -1,0 +1,66 @@
+{
+  "APIARY": {
+    "ERROR_CREATE": "Failed to create an apiary",
+    "ERROR_GET_ALL": "Failed to retrieve apiaries",
+    "ERROR_GET_ONE": "Failed to retrieve an apiary",
+    "NOT_FOUND": "Apiary not found",
+    "ERROR_DELETE": "Failed to delete an apiary",
+    "ERROR_UPDATE": "Failed to update an apiary"
+  },
+  "BEEHIVE": {
+    "ERROR_CREATE": "Failed to create a beehive",
+    "ERROR_GET_ALL": "Failed to retrieve beehives",
+    "ERROR_GET_ONE": "Failed to retrieve a beehive",
+    "NOT_FOUND": "Beehive not found",
+    "ERROR_DELETE": "Failed to delete a beehive",
+    "ERROR_UPDATE": "Failed to update a beehive"
+  },
+  "VALIDATIONS": {
+    "ERROR_NAME": "Name should be more than 3 characters",
+    "ERROR_DESCRIPTION": "Description should be more than 3 characters"
+  },
+  "CART": {
+    "ERROR_CREATE": "Failed to add to cart",
+    "ERROR_GET_ALL": "Failed to retrieve items in the cart",
+    "ERROR_DELETE": "Failed to delete an item from the cart"
+  },
+  "ORDER": {
+    "ERROR_CREATE": "Failed to create an order",
+    "ERROR_GET": "Failed to retrieve an order",
+    "NOT_FOUND": "Order not found",
+    "ERROR_DELETE": "Failed to delete an order",
+    "ERROR_UPDATE": "Failed to update an order"
+  },
+  "PRODUCT": {
+    "ERROR_CREATE": "Failed to create a product",
+    "ERROR_GET_ALL": "Failed to retrieve products",
+    "ERROR_GET_ONE": "Failed to retrieve a product",
+    "NOT_FOUND": "Product not found",
+    "ERROR_DELETE": "Failed to delete a product",
+    "ERROR_UPDATE": "Failed to update a product"
+  },
+  "QUEEN": {
+    "ERROR_CREATE": "Failed to create a queen",
+    "ERROR_GET_ONE": "Failed to retrieve a queen",
+    "NOT_FOUND": "Queen not found",
+    "ERROR_DELETE": "Failed to delete a queen",
+    "ERROR_UPDATE": "Failed to update a queen"
+  },
+  "USER": {
+    "ERROR_CREATE": "Failed to register",
+    "ERROR_GET_ALL": "Failed to retrieve users",
+    "ERROR_GET_ONE": "Failed to retrieve a user",
+    "ERROR_PASSWORD": "Invalid username or password",
+    "ERROR_LOGIN": "Failed to log in",
+    "ERROR_ACCESS": "Access denied",
+    "ERROR_DATA": "Failed to get data",
+    "NOT_FOUND": "User not found",
+    "ERROR_DELETE": "Failed to delete a user",
+    "ERROR_UPDATE": "Failed to update a user",
+    "VALIDATIONS": {
+      "ERROR_EMAIL": "Invalid email format",
+      "ERROR_NAME": "Name should be at least 2 letters long",
+      "ERROR_PASSWORD": "Password should be more than 5 characters"
+    }
+  }
+}
