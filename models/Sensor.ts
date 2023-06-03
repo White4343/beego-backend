@@ -14,6 +14,14 @@ const SensorSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  status: {
+    type: String,
+    required: true,
+  },
+  temperatureRegime: {
+    type: String,
+    required: true,
+  },
   createdAt: {
     type: Date,
     required: true,

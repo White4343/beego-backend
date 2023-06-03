@@ -38,6 +38,7 @@ export interface IDecodedToken {
 export interface ISensor extends Document {
   temperature: string;
   humidity: string;
+  status: string;
   createdAt: Date;
   deviceID: string;
   _doc: object;
@@ -68,6 +69,10 @@ export interface IBeehive extends Document {
 
 export interface IReqBeehive extends Request {
   userId?: string;
+}
+
+export interface IReqSensor extends Request {
+  deviceID?: string;
 }
 
 export interface IQueen extends Document {

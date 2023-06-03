@@ -29,6 +29,7 @@ function createServer() {
     app.use('/api', routes.apiaryRouter);
     app.use('/api', routes.productRouter);
     app.use('/api', routes.uploadRouter);
+    app.use('/api', routes.cartRouter);
 
     return app
 }
