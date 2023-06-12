@@ -30,6 +30,7 @@ export const createApiary = async (req: IReqApiary, res: Response) => {
 export const getAllApiary = async (req: IReqApiary, res: Response) => {
     try {
         const apiaries = await ApiaryModel.find({user: req.userId}).exec();
+        console.log(apiaries)
         res.json(apiaries);
 
     } catch (err) {

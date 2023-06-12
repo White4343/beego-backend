@@ -13,9 +13,9 @@ router.use('/beehive/:beehiveId', QueenRouter)
 
 router.post('/beehive', checkAuth, canGetBeehive, beehiveCreateValidation, handleValidationErrors, BeehiveController.create)
 
-router.get('/beehive', checkAuth, cache(300), canGetBeehive, BeehiveController.getAll)
+router.get('/beehive', checkAuth, canGetBeehive, BeehiveController.getAll)
 
-router.get('/beehive/:beehiveId', cache(300), checkAuth, canGetBeehive, BeehiveController.getOne)
+router.get('/beehive/:beehiveId', checkAuth, canGetBeehive, BeehiveController.getOne)
 
 router.patch('/beehive/:beehiveId', checkAuth, canGetBeehive, beehiveCreateValidation, handleValidationErrors, BeehiveController.update)
 

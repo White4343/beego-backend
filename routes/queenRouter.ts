@@ -9,7 +9,7 @@ const router = express.Router({mergeParams: true})
 
 router.post('/queen', checkAuth, canGetBeehive, QueenController.create)
 
-router.get('/queen', checkAuth, canGetBeehive, cache(300),  QueenController.getOne)
+router.get('/queen', checkAuth, canGetBeehive, QueenController.getOne)
 
 router.patch('/queen', checkAuth, canGetBeehive, QueenController.update)
 

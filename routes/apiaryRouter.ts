@@ -12,9 +12,9 @@ router.use('/apiary/:apiaryId', BeehiveRouter);
 
 router.post('/apiary', checkAuth, apiaryCreateValidation, handleValidationErrors, ApiaryController.createApiary);
 
-router.get('/apiary', checkAuth, cache(300), ApiaryController.getAllApiary);
+router.get('/apiary', checkAuth, ApiaryController.getAllApiary);
 
-router.get('/apiary/:apiaryId', checkAuth, cache(300), ApiaryController.getOneApiary);
+router.get('/apiary/:apiaryId', checkAuth, ApiaryController.getOneApiary);
 
 router.delete('/apiary/:apiaryId', checkAuth, ApiaryController.removeApiary);
 

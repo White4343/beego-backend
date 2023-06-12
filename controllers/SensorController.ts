@@ -1,4 +1,5 @@
 import SensorModel from '../models/Sensor';
+import SensorDataModel from '../models/SensorData';
 import {Request, Response} from "express";
 import {IQueen, IReqSensor, ISensor} from "../config/interface";
 
@@ -33,6 +34,7 @@ export const create = async (req: Request, res: Response) => {
     }
 };
 
+
 export const update = async (req: Request, res: Response) => {
     try {
         const {humidity, temperature, status, apiKey, deviceID} = req.body;
@@ -50,6 +52,16 @@ export const update = async (req: Request, res: Response) => {
                     deviceID: deviceID
                 },
             );
+
+            const doc = new SensorDataModel({
+                deviceID,
+                temperature,
+                humidity,
+                status,
+                createdAt: new Date(),
+            });
+
+            const sensor = await doc.save();
 
             res.json({
                 success: true,

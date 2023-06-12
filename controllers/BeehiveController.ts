@@ -37,6 +37,8 @@ export const getAll = async (req: Request, res: Response) => {
     try {
         const beehives = await BeehiveModel.find({apiary: req.params.apiaryId});
 
+        console.log(beehives)
+
         res.json(beehives);
     } catch (err) {
         console.log(err);
